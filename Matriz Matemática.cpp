@@ -6,6 +6,64 @@
 #define ALTO 25
 using namespace std;
 
+void dibujo(char casilla)
+{
+    int x = 2;
+    int y = 2;
+    switch(casilla)
+    {   
+        case 'w':
+            int cont = 0;
+            while(cont < 5)
+            switch (cont)
+            {
+                case 0:
+                    gotoxy(x,y);
+                    cout << ("  __      _") << endl;
+                break;
+                case 1:
+                    gotoxy(x,y+1);
+                    cout << ("o'')}____//") << endl;
+                break;
+                case 2:
+                    gotoxy(x,y+2);
+                    cout << (" `_/      )") << endl;
+                break; 
+                case 3:
+                    gotoxy(x,y+3);
+                    cout << (" (_(_/-(_/") << endl;
+                break; 
+            }           
+        break;
+        case 'a': 
+            int cont = 0;
+            while(cont < 5)
+            switch (cont)
+            {
+                case 0:
+                    gotoxy(x-10,y);
+                    cout << ("  __      _") << endl;
+                break;
+                case 1:
+                    gotoxy(x-10,y+1);
+                    cout << ("o'')}____//") << endl;
+                break;
+                case 2:
+                    gotoxy(x-10,y+2);
+                    cout << (" `_/      )") << endl;
+                break; 
+                case 3:
+                    gotoxy(x,y+3);
+                    cout << (" (_(_/-(_/") << endl;
+                break;  
+            }         
+        break;
+        case 's':          
+        break;
+        case 'd':          
+        break;
+    }
+}
 void gotoxy(int x, int y)
 {
 HANDLE hCon;

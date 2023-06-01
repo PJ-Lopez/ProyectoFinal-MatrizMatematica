@@ -77,37 +77,58 @@ int main ()
     int x = 30;
     int y = 21;
     char movimiento;
-    do
+    int cont = 0;
+    while (cont < 2)
     {
         system("cls");
         dibujo(x, y);
         dibujarmatriz();
         recuadro();
-        cout << endl << "Ingrese una tecla: ";
+        cout << endl << "Movimientos: " << 2 - cont << endl; 
+        cout << "Ingrese una tecla: ";
         cin >> movimiento;
         switch(movimiento)
         {   
             case 'w':
             {
-                y -= 5;
+                if(y > 5)
+                {
+                    y -= 5;
+                    cont++;
+                }   
             }           
             break;
             case 'a':
-            { 
-                x -= 12;
+            {
+                if(x > 30)
+                {
+                    x -= 12;
+                    cont++;
+                }         
             }         
             break;
             case 's':
             {
-                y += 5;
+                if(y < 20)
+                {
+                    y += 5;
+                    cont++;
+                }    
             }          
             break;
             case 'd':  
             {
-                x += 12;
+                if(x < 78)
+                {
+                    x += 12;
+                    cont++;
+                } 
             }        
             break;
         } 
-    } while (movimiento != 'q');
-    
+    }
+    system("cls");
+    dibujo(x, y);
+    dibujarmatriz();
+    recuadro();     
 }

@@ -185,6 +185,7 @@ int main()
         recuadro();
         cout << endl << "Fallos restantes: " << 8 - fallos << endl;
         cout << "Movimientos: " << 2 - cont << endl; 
+        cout << "NOTA: Te puedes mover con WASD, w: arriba, a: izquierda, s: abajo y d: derecha " << endl; 
         cout << "Ingrese una tecla: ";
         cin >> movimiento;
         switch(movimiento)
